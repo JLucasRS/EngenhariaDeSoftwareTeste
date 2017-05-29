@@ -6,7 +6,6 @@ import org.junit.Test;
 public class TesteValores {
 	
 	private Valores teste = new Valores();
-	private int n = 1;
 	
 	@Before
 	public void setUp() throws Exception {
@@ -18,7 +17,7 @@ public class TesteValores {
 
 	@After
 	public void tearDown() throws Exception {
-	
+		
 	}
 
 	@Test
@@ -47,12 +46,12 @@ public class TesteValores {
 	
 	@Test
 	public void testeApagar(){
-		assertEquals(10, teste.apagar(4));
-		assertEquals(8, teste.apagar(3));
-		assertEquals(4, teste.apagar(1));
-		assertEquals(2, teste.apagar(0));
-		assertEquals(6, teste.apagar(0));
-		assertEquals(-1, teste.apagar(4));
+		int[] valores = {2,4,6,8,10};
+		for (int i = 4; i >= 0; i--){
+			assertEquals(valores[i], teste.apagar(i));
+		}
+		assertEquals(-1, teste.apagar(3));
+		assertEquals(-1, teste.apagar(0));
 		assertEquals(0, teste.size());
 		assertEquals(-1, teste.bigger());
 		assertEquals(-1, teste.lower());
