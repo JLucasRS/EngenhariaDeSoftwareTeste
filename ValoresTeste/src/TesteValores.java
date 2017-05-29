@@ -10,7 +10,7 @@ public class TesteValores {
 	
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Inserindo números 2, 4, 6, 8 e 10.");
+		System.out.println("Inserindo nÃºmeros 2, 4, 6, 8 e 10.");
 		for (int i = 2; i <= 10; i+=2){
 			teste.inserir(i);
 		}
@@ -18,7 +18,7 @@ public class TesteValores {
 
 	@After
 	public void tearDown() throws Exception {
-		System.out.println("Iniciando o " + n +"° Teste");
+	
 	}
 
 	@Test
@@ -27,7 +27,6 @@ public class TesteValores {
 		assertEquals(10, teste.bigger());
 		assertEquals(2, teste.lower());
 		assertEquals(6, teste.media(), 0);
-		n++;
 	}
 	
 	@Test
@@ -44,7 +43,6 @@ public class TesteValores {
 		assertEquals(405, teste.bigger());
 		assertEquals(1, teste.lower());
 		assertEquals(74.4, teste.media(), 0);
-		n+=2;
 	}
 	
 	@Test
