@@ -14,7 +14,7 @@ public class Valores implements ValoresITF{
 	}
 	
 	public int apagar(int i){
-		if(valores.isEmpty() || i > size()){
+		if(valores.isEmpty() || i >= size()){
 			return -1;
 		}else{
 			int retorno = valores.get(i);
